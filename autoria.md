@@ -8,7 +8,9 @@
 > con comentarios en el código fuente. La omisión de fuentes puede considerarse plagio.
 
 ## Ejercicio 6
-- Implementación íntegramente propia, sin fuentes externas.
+- La implementacion del main fue mia, me ayude de claude para depurar mi codigo y arreglar 
+ciertos errores como condiciones de los for al revés o imprimir mal el resultado.
+chat: https://claude.ai/share/032c40e1-3d3b-41fb-b676-439cf1cf2246
 
 ## Ejercicio 7
 - Implementación íntegramente propia, sin fuentes externas.
