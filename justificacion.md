@@ -17,7 +17,14 @@ termina quedando en O(N). Luego Imprimir las dos mitados y el centro es O(N).
 - El conteo tiene un tamaño fijo y el resultado ocupa N, quedando O(N) de espacio.
 
 ## Ejercicio 7
-- Sin restricciones de órdenes. / Justificación: ...
+- La letra pedía dividir y conquistar en O(N log N) de tiempo y O(N) de espacio. Uso un mergesort 
+que divide el array a la mitad hasta llegar a un solo corredor y al combinar antes de intercalar, 
+cuento las remontadas entre las dos mitades. Como las mitades ya vienen ordenadas, cuando ord1[i] 
+le gana a ord2[j] también le ganan todos los que siguen, así que sumo n1 - i, los índices i y j 
+solo avanzan, por lo que contar y intercalar es O(N) en cada combinación. Son log N niveles con N 
+elementos en total por nivel, quedando O(N log N). 
+- Los arrays auxiliares se liberan después de intercalar, así que en cada momento solo estan los 
+del camino de la recursión, que suman O(N). El contador es long long porque puede superar 32 bits.
 
 ## Ejercicio 8
 - Sin restricciones de órdenes. / Justificación: ...

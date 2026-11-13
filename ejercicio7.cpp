@@ -5,10 +5,8 @@
 
 using namespace std;
 
-// Tomado del teorico de Dividir y Conquistar dado en la clase del 28/11
-int* intercalar(int arr1[], int arr2[]) {
-  int n1 = sizeof(arr1) / sizeof(arr1[0]);
-  int n2 = sizeof(arr2) / sizeof(arr2[0]);
+// Tomado del teorico de Dividir y Conquistar dado en la clase del 28/11 y corregido por mi depurando con claude
+int* intercalar(int arr1[], int n1, int arr2[], int n2) {
   int* ret = new int[n1 + n2];
 
   int i = 0, j = 0, k = 0;
@@ -43,19 +41,24 @@ int* mergeSort(int valores[], int inicio, int fin, long long& cantRemontadasEpic
   int* ord1 = mergeSort(valores, inicio, mitad, cantRemontadasEpicas);
   int* ord2 = mergeSort(valores, mitad + 1, fin, cantRemontadasEpicas);
 
+  int n1 = mitad - inicio + 1;
+  int n2 = fin - mitad;
+
   int i = 0;
   int j = 0;
-  while(ord1[i] && ord2[j]){
-    if(ord1[i] < ord2[j]*2){
-      cantRemontadasEpicas++;
+  while(i < n1 && j < n2){
+    if(ord1[i] > ord2[j]*2){
+      cantRemontadasEpicas += n1 - i;
       j++;
     }else{
       i++;
-      j=0;
     }
   }
 
-  return intercalar(ord1, ord2);
+  int* ret = intercalar(ord1, n1, ord2, n2);
+  delete[] ord1;
+  delete[] ord2;
+  return ret;
 }
 //
 
@@ -64,7 +67,7 @@ int main()
     int N;
     cin >> N;
 
-    long long cantRemontadasEpicas;
+    long long cantRemontadasEpicas = 0;
     int* posCorredores = new int[N];
 
     for(int i = 0; i < N; i++){
@@ -73,11 +76,12 @@ int main()
         posCorredores[i] = corredor;
     }
 
-    mergeSort(posCorredores,0,N,cantRemontadasEpicas);
+    int* ordenado = mergeSort(posCorredores,0,N-1,cantRemontadasEpicas);
 
-    cout << cantRemontadasEpicas;
+    cout << cantRemontadasEpicas << endl;
 
-    cout << endl;
+    delete[] ordenado;
+    delete[] posCorredores;
 
     return 0;
 }
