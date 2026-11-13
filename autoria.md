@@ -13,7 +13,7 @@ ciertos errores como condiciones de los for al revés o imprimir mal el resultad
 chat: https://claude.ai/share/032c40e1-3d3b-41fb-b676-439cf1cf2246
 
 ## Ejercicio 7
-- Implementación íntegramente propia, sin fuentes externas.
+- La implementacion del mergesort fue tomada del teorico de Dividir y Conquistar del curso dado en la clase del 28/11, el resto de cambios fueron hechos por mi.
 
 ## Ejercicio 8
 - Implementación íntegramente propia, sin fuentes externas.

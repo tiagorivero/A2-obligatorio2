@@ -39,7 +39,27 @@ chicos como condiciones de los for al revés o imprimir mal el resultado. Ademas
 un unico espacio entre los numeros y ami me quedaba siempre uno de más para lo cual inserto el
 espacio antes solo sino es el primero.
 - Luego las pruebas pasaron correctamente
-- Commitie el ejercicio 1
+- Commitie el ejercicio 6
 
 - Para la funcion que corre todas las pruebas reutilice la misma del obligatorio 1 que fue 
 generada por IA. chat: "https://claude.ai/share/642800ad-095a-4bbc-bfb5-32a8286454af".
+
+## 2026-11-12 — Tiago Rivero
+- Lei la letra del ejercicio 7. Ademas volvi a ver la clase del 28/11 donde el profesor explico 
+este ejercicio. 
+- En esta clase se explica que este ejercicio es un mergesort que al combinar, primero cuenta las 
+remontadas entre las dos mitades y después las ordena. Ademas dimos un codigo de mergesort el 
+cual es el mismo que voy a utilizar como base.
+- En el main simplemente tomo la cantidad de corredores y los guardo en un array y llamo al 
+mergesort que mediante el & para la direccion de memoria va cambiando la cantidad de remontadas.
+- Ademas en la letra se menciona que la cantidad de remontadas épicas puede superar el rango de 
+un entero de 32 bits para lo que utilice long long.
+- En el mergesort basandome en el ejemplo de clase, mi idea inicial es usar un indice en cada 
+mitad, si el elemento de la primera mitad es mayor que el doble del de la segunda, avanzo el 
+indice de la segunda si no, avanzo el de la primera y vuelvo a poner en 0 el de la segunda.
+- En la funcion mientras que el elemento de ambas mitadades con su indice no sea nulo hago la 
+comparacion de arriba si la primera mitad es mayor que el doble sumo una remontada y avanzo j, 
+sino avanzo i para ir al siguiente de la primera mitad y reinicio el j para empezar de nuevo.
+- La funcion de intercalar por ahora la dejo igual porque entiendo que solo ordena las mitades.
+- Commiteo lo que avance hoy del ejercicio 7 
+(arregle la linea de la bitacora del 2026-11-10 que llame al ejercicio 6 como ejercicio 1)
