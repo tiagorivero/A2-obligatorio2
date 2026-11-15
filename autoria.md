@@ -19,7 +19,8 @@ para depurar este codigo y yo arreglar los errores del codigo.
 chat: https://claude.ai/share/df4a1207-bcf8-4dae-a932-ada2690de47f
 
 ## Ejercicio 8
-- Implementación íntegramente propia, sin fuentes externas.
+- La implementacion de la mochila fue tomada de la clase del 13/11 donde hicimos el codigo de una mochila de 0-1, con peso y valor, yo lo que hice fue adaptarla a lo que pedia el ejercicio. Ademas de pedirle a claude explicarla el ejercicio para poder asociarlo con el ejemplo de 2 dimensiones visto en clase, ademas de depuracion de codigo que luego yo correji.
+chat: https://claude.ai/share/ac18834e-7dfb-4825-9805-c97e3bd0fa05
 
 ## Ejercicio 9
 - Implementación íntegramente propia, sin fuentes externas.

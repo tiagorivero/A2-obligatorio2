@@ -86,3 +86,14 @@ ganan todos los que siguen en la primera mitad ya que está ordenada. Esto lo ar
 la distancia con el resto osea sumando n1 - i en vez de 1.
 - Commitie el ejercicio 7
 (arregle la fecha de la clase de vi que estaba mal en bitacora y autoria, era 28/10 no 28/11)
+
+## 2026-11-14 — Tiago Rivero
+- Lei la letra del ejercicio 8.
+- Ya el dia 13/11 habiamos visto un ejemplo de una mochila con 0-1 y peso y valor, ademas hicimos el codigo por lo cual tome este mismo codigo como base.
+- En un inicio no entendia como asociar el ejemplo de la matriz con este caso con mas limites, por lo que le pedi a claude que me explicara este ejercicio y me ayudara a explorar ideas de como representarlo, ya sea con la construccion de la tabla, los for anidados, la logia de usar o no un objeto , porque me parecia muy dificil pensar en más dimensiones
+- La diferencia de este ejercicio con la mochila anterior es que ahora esta, ademas de tener un limite de peso tiene un limite en la cantidad de achuras, cortes principales, bebidas y vegetales. Por lo cual esto aumenta las dimenciones de la mochila
+- Al aumentar las dimensiones tambien aumentan en la tabla, entonces para crearla lo que hice fue recorrer 6 veces por cada objeto, por cada peso y por cada uno de los 4 limites de categoria, al crearla tuve ciertos errores en las variables y los límites de los for, para lo que le pedi a claude que me depurara el codigo y luego lo correji.
+- Ademas el otro bloque del for que recorre cada escenario y si se usa o no el objeto tambien aumenta en dimensiones por ende tambien son 6 for anidados.
+- Luego para la logica de usar o no un objeto lo que hice fue tener una variable limite y luego con varios if segun cual sea la categoria le asigno el limite de esa categoria y luego en el if que indica si no se puede usar el objeto ademas de comparar por peso, verifico si el limite es menor que 1, osea no hay lugar disponible para esa categoria.
+- Corri las pruebas y estas me dieron mal, me queda pendiente revisar mañana en que le erre.
+- Commiteo lo que pude avanzar del ejercicio 8.

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// Tomado del teorico de Dividir y Conquistar dado en la clase del 28/11 y corregido por mi depurando con claude
+// Tomado del teorico de Dividir y Conquistar dado en la clase del 28/10 y corregido por mi depurando con claude
 int* intercalar(int arr1[], int n1, int arr2[], int n2) {
   int* ret = new int[n1 + n2];
 
