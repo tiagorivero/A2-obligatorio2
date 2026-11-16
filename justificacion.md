@@ -27,7 +27,13 @@ elementos en total por nivel, quedando O(N log N).
 del camino de la recursión, que suman O(N). El contador es long long porque puede superar 32 bits.
 
 ## Ejercicio 8
-- Sin restricciones de órdenes. / Justificación: ...
+- La letra pedía programación dinámica con tabulación en O(N·W·L0·L1·L2·L3) de tiempo y espacio. Uso la mochila 0/1 vista  
+en clase pero con una tabla de 6 dimensiones con objetos, peso y los 4 limites por cada categoria. Cada celda guarda la 
+mejor satisfaccion con esos objetos, ese peso y esos 4 lugares por categoria, y se calcula en O(1) con el maximo entre no 
+llevar el objeto osea tomar la celda de arriba o llevarlo si entra en peso y queda lugar en su categoria, osea su 
+satisfaccion más la celda de arriba con menos peso y un lugar menos en su categoria. 
+- Recorro todas las celdas con 6 for anidados, que son N·W·L0·L1·L2·L3 celdas, quedando ese orden de tiempo, y la tabla 
+ocupa lo mismo en espacio.
 
 ## Ejercicio 9
 - Sin restricciones de órdenes. / Justificación: ...

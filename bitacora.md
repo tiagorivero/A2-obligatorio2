@@ -97,3 +97,21 @@ la distancia con el resto osea sumando n1 - i en vez de 1.
 - Luego para la logica de usar o no un objeto lo que hice fue tener una variable limite y luego con varios if segun cual sea la categoria le asigno el limite de esa categoria y luego en el if que indica si no se puede usar el objeto ademas de comparar por peso, verifico si el limite es menor que 1, osea no hay lugar disponible para esa categoria.
 - Corri las pruebas y estas me dieron mal, me queda pendiente revisar mañana en que le erre.
 - Commiteo lo que pude avanzar del ejercicio 8.
+
+## 2026-11-15 — Tiago Rivero
+- Continuo con el ejercicio 8 donde lo deje con las pruebas dando mal.
+- Depure con claude y me di cuenta de varios errores, primero estaba tomando mal la base, en el ejemplo de clase tomabamos 
+base 1 y yo en mi main estaba trabajando con base 0, simplemente cambie mi main a base 1, expandiendo los arrays a N + 1.
+- El error principal fue en la logica de usar o no el objeto, no manejaba bien el caso de llevar el objeto, nunca restaba a 
+los limites el uso del objeto, por lo que le pedi a claude que me diera ideas de como arreglar este error ya que no me 
+gustaba como habia manejado el limite con muchos if.
+- Lo que hice fue usar una array con los limites disponibles y a este mismo le restaba 1 si se usaba el objeto de tal 
+categoria y utilizaba ese array en la comparacion con max de usar o no el objeto. 
+- Volvi a depurar este codigo con claude, me dijo que la forma en la que habia declarado el limite disponible no era 
+eficiente ya que hacia new en cada casilla y que usara mejor memoria local, para lo cual mejor no utilice el new y asigne 
+los valores de los limites directamente al array, en vez de asignarle uno por uno.
+- Depure por ultima vez y lo unico que me quedaba era que habia inicializado limitesDisponibles como puntero en vez de 
+arreglo de 4. Por ahora no maneje la memoria porque la tabla ocupa 6 dimensiones y ya liberarla complejaria demasiado el 
+codigo.
+- Ya con todos estos arreglos el codigo paso las pruebas.
+- Commiteo el ejercicio 8 terminado.
