@@ -36,7 +36,14 @@ satisfaccion más la celda de arriba con menos peso y un lugar menos en su categ
 ocupa lo mismo en espacio.
 
 ## Ejercicio 9
-- Sin restricciones de órdenes. / Justificación: ...
+- La letra pedía programación dinámica con memoización en O(K^2) de tiempo y espacio. Lo que hago 
+es usar funcion recursiva con el estado (r, d, b) que seria la ronda, la diferencia de goles de A 
+y si bailo en el tiro anterior, basandome en el diagrama hecho en clase, en cada ronda patea A y 
+calculo la nueva diferencia d_n y si es mayor a 0, puede elegir si atajar o bailar con la mitad 
+de likes si ya habia bailado anteriormente, entre estas 2 opciones me quedo con el maximo, si no 
+solo puede atajar.
+- Luego guardo cada estado en memo de K*(K+1)*2 inicializado en -1, asi cada estado se calcula 
+una sola vez en O(1), quedando O(K^2) de tiempo, y el memo ocupa O(K^2) de espacio.
 
 ## Ejercicio 10
 - Sin restricciones de órdenes. / Justificación: ...

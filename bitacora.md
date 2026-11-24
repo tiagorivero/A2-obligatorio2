@@ -10,6 +10,8 @@
 > respuesta. Una bitácora escrita íntegramente el día de la entrega implica pérdida de puntos.
 
 ## 2026-11-03 — Tiago Rivero
+
+### Primera Hora
 - Primero lo que hice fue usar como template el repositorio de github, crear el mio y clonarlo 
 en mi pc.
 - Luego lei la letra del ejercicio 6.
@@ -17,6 +19,8 @@ en mi pc.
 podria ir tomando los maximos y ir escribiendolos en un string resultado y mostrarlo.
 
 ## 2026-11-05 — Tiago Rivero
+
+### Primera Hora
 - Invite al profesor para ser colaborador en mi respositorio de github.
 - Empece a escribir el codigo del ejercicio 6 en la que me di cuenta que mi idea inicial de 
 tomar los maximos no iba a servir ya que necesitaba ir verificando si cada maximo tenia una 
@@ -28,12 +32,16 @@ solo toman valores entre 0 y 1000.
 commit por más minimo cambio que haya en el codigo)
 
 ## 2026-11-10 — Tiago Rivero
+
+### Primera Hora
 - Continue con el ejercicio, ya con el array conteo lo recorro desde 1000 hasta 0 y en cada 
 posicion mientras que esta aparezca más de una vez lo agrego a mi array resultado, avanzo la 
 posicion y resto 2 por el par. Y si todavia me quedaba uno y este es mayor que el maximo lo 
 guardo para ponerlo al medio.
 - Luego recorro el resultado mostrando los elementos hasta la ultima posicion que se inserto, 
 muestro el medio y vuelvo a recorrer pero desde la ultima posicion hasta la primera.
+
+### Segunda Hora
 - Corri las pruebas y estas me dieron errores, para lo que depure con claude algunos bugs 
 chicos como condiciones de los for al revés o imprimir mal el resultado. Ademas la letra pedia 
 un unico espacio entre los numeros y ami me quedaba siempre uno de más para lo cual inserto el
@@ -45,6 +53,8 @@ espacio antes solo sino es el primero.
 generada por IA. chat: "https://claude.ai/share/642800ad-095a-4bbc-bfb5-32a8286454af".
 
 ## 2026-11-12 — Tiago Rivero
+
+### Primera Hora
 - Lei la letra del ejercicio 7. Ademas volvi a ver la clase del 28/10 donde el profesor explico 
 este ejercicio. 
 - En esta clase se explica que este ejercicio es un mergesort que al combinar, primero cuenta las 
@@ -54,6 +64,8 @@ cual es el mismo que voy a utilizar como base.
 mergesort que mediante el & para la direccion de memoria va cambiando la cantidad de remontadas.
 - Ademas en la letra se menciona que la cantidad de remontadas épicas puede superar el rango de 
 un entero de 32 bits para lo que utilice long long.
+
+### Segunda Hora
 - En el mergesort basandome en el ejemplo de clase, mi idea inicial es usar un indice en cada 
 mitad, si el elemento de la primera mitad es mayor que el doble del de la segunda, avanzo el 
 indice de la segunda si no, avanzo el de la primera y vuelvo a poner en 0 el de la segunda.
@@ -65,6 +77,8 @@ sino avanzo i para ir al siguiente de la primera mitad y reinicio el j para empe
 (arregle la linea de la bitacora del 2026-11-10 que llame al ejercicio 6 como ejercicio 1)
 
 ## 2026-11-13 — Tiago Rivero
+
+### Primera Hora
 - Continue con el ejercicio que quedo a medias ayer, probe las pruebas y estas me dieron errores 
 para lo que le pedi a claude que depurara mi codigo.
 - Claude noto varios errores en el codigo, como la funcion intercalar que usa sizeof y daba 
@@ -75,6 +89,8 @@ tamaños. Para esto le paso los tamaños al llamarla en vez de calcularlos con s
 - Otro error bastante principal que me marco fue el while en el que la condicion miraba los 
 valores y no si los indices se salian de los arrays, la comparacion estaba invertida y reiniciaba 
 el j en 0 lo que hacia que no cumpliera el orden que pedia el ejercicio.
+
+### Segunda Hora
 - Para arreglar este bucle cambié la condición para que compare los índices con el tamaño de cada
 mitad, di vuelta la comparación y saqué el reinicio de j: si había remontada sumaba 1 y avanzaba 
 j, y si no avanzaba i, así ninguno de los dos índices vuelve atrás.
@@ -88,10 +104,14 @@ la distancia con el resto osea sumando n1 - i en vez de 1.
 (arregle la fecha de la clase de vi que estaba mal en bitacora y autoria, era 28/10 no 28/11)
 
 ## 2026-11-14 — Tiago Rivero
+
+### Primera Hora
 - Lei la letra del ejercicio 8.
 - Ya el dia 13/11 habiamos visto un ejemplo de una mochila con 0-1 y peso y valor, ademas hicimos el codigo por lo cual tome este mismo codigo como base.
 - En un inicio no entendia como asociar el ejemplo de la matriz con este caso con mas limites, por lo que le pedi a claude que me explicara este ejercicio y me ayudara a explorar ideas de como representarlo, ya sea con la construccion de la tabla, los for anidados, la logia de usar o no un objeto , porque me parecia muy dificil pensar en más dimensiones
 - La diferencia de este ejercicio con la mochila anterior es que ahora esta, ademas de tener un limite de peso tiene un limite en la cantidad de achuras, cortes principales, bebidas y vegetales. Por lo cual esto aumenta las dimenciones de la mochila
+
+### Segunda Hora
 - Al aumentar las dimensiones tambien aumentan en la tabla, entonces para crearla lo que hice fue recorrer 6 veces por cada objeto, por cada peso y por cada uno de los 4 limites de categoria, al crearla tuve ciertos errores en las variables y los límites de los for, para lo que le pedi a claude que me depurara el codigo y luego lo correji.
 - Ademas el otro bloque del for que recorre cada escenario y si se usa o no el objeto tambien aumenta en dimensiones por ende tambien son 6 for anidados.
 - Luego para la logica de usar o no un objeto lo que hice fue tener una variable limite y luego con varios if segun cual sea la categoria le asigno el limite de esa categoria y luego en el if que indica si no se puede usar el objeto ademas de comparar por peso, verifico si el limite es menor que 1, osea no hay lugar disponible para esa categoria.
@@ -99,6 +119,8 @@ la distancia con el resto osea sumando n1 - i en vez de 1.
 - Commiteo lo que pude avanzar del ejercicio 8.
 
 ## 2026-11-15 — Tiago Rivero
+
+### Primer Hora
 - Continuo con el ejercicio 8 donde lo deje con las pruebas dando mal.
 - Depure con claude y me di cuenta de varios errores, primero estaba tomando mal la base, en el ejemplo de clase tomabamos 
 base 1 y yo en mi main estaba trabajando con base 0, simplemente cambie mi main a base 1, expandiendo los arrays a N + 1.
@@ -107,6 +129,8 @@ los limites el uso del objeto, por lo que le pedi a claude que me diera ideas de
 gustaba como habia manejado el limite con muchos if.
 - Lo que hice fue usar una array con los limites disponibles y a este mismo le restaba 1 si se usaba el objeto de tal 
 categoria y utilizaba ese array en la comparacion con max de usar o no el objeto. 
+
+### Segunda Hora
 - Volvi a depurar este codigo con claude, me dijo que la forma en la que habia declarado el limite disponible no era 
 eficiente ya que hacia new en cada casilla y que usara mejor memoria local, para lo cual mejor no utilice el new y asigne 
 los valores de los limites directamente al array, en vez de asignarle uno por uno.
@@ -115,3 +139,43 @@ arreglo de 4. Por ahora no maneje la memoria porque la tabla ocupa 6 dimensiones
 codigo.
 - Ya con todos estos arreglos el codigo paso las pruebas.
 - Commiteo el ejercicio 8 terminado.
+
+## 2026-11-23 — Tiago Rivero
+
+### Primer Hora
+- Lei la letra del ejercicio 9.
+- Primero para entender el ejercicio le pase una imagen de un dibujo del pizarron a claude para 
+que me explicara el ejercicio y entenderlo como lo habia pensado el profesor.
+- De esta imagen entendi que tenemos 3 estados (r,d,b), r siendo las rondasm d la diferencia de 
+gol y b si bailo en el anterior, luego patea A y si mete[r] sumo eso a diferencia antes del tiro 
+de B, y verifico si esta diferencia es mayor a 0 puedo decidir si bailar o no, o directamente 
+atajar.
+- Todavia no me quedaba muy claro como plantear la memoización por lo que le pedi ideas a claude 
+de como empezar para lo que me dijo que primero haga una version recursiva siguiendo el algoritmo 
+que mencione anteriormente.
+
+### Segunda Hora
+- En esta version lo que hice fue hacer primero el caso base sino quedan rondas devuelvo 0, luego 
+sigo la logica del dibujo, patea A calculo la diferencia antes del tiro de B donde no es 
+necesario un if porque ya te dan mete[r] como un 1 o un 0, luego si la diferencia nueva es mayor 
+a 0 puedo elegir entre atajar o bailar quedandome con el maximo en caso contrario solo puedo 
+atajar y el resultado que elijo lo devuelvo.
+- Luego le pedi a claude que me depurara este codigo donde tube unos simples errores en el main 
+al tomar la informacion, ademas le pedi que me explicara como podria implementar la memoizacion.
+- De su explicacion pude entender que hay estados que siempre repiten su resultado sin necesidad 
+de recorrer toda la rama, por lo cual debo hacer una estructura que almacene (ronda, diferencia, 
+bailo), consulto si ese resultado ya esta calculado si esta lo devuelvo y sino lo guardo.
+
+### Tercera Hora
+- Lo que hice fue tomando como ejemplo el ejercicio de fibonacci, creo en el main el memo de 3 
+dimensiones en lo que me base de la mochila de 6 dimensiones y lo inicializo en -1, luego despues 
+del caso base consulto si este valor ya esta calculado y lo devuelvo, y sino al retornar el nuevo 
+este mismo lo guardo en el memo.
+- Depure este codigo y arregle unos errores en los limites del array y del for en la creacion del 
+memo, por ahora no libere la memoria del memo porque es parecido a la mochila donde tengo que 
+hacer 3 for anidados con delete, solo libere mete y likes que no dependian de esto.
+- Luego de arreglar los errores, corri las pruebas y todas dieron correctamente
+- Commiteo el ejercicio 9
+
+(agrege la separacion por horas aprox en cada dia, porque lo habia tomado como una entrada por 
+dia trabajado, no por hora trabajada)

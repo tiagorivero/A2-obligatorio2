@@ -23,7 +23,12 @@ chat: https://claude.ai/share/df4a1207-bcf8-4dae-a932-ada2690de47f
 chat: https://claude.ai/share/ac18834e-7dfb-4825-9805-c97e3bd0fa05
 
 ## Ejercicio 9
-- Implementación íntegramente propia, sin fuentes externas.
+- La implementacion de decidirBailar fue hecha por mi basada inicialmente en el dibujo que hizo 
+el profesor en clase, luego para sumar la memoización tome como ejemplo el ejercicio de Fibonacci 
+y la creacion de la mochila del ejercicio 8 para crear la variable memo, ademas de utilizar 
+claude para que me explicara el ejemplo hecho en clases, me diera ideas de como plantear el 
+ejercicio y la memoización, y me ayudara a depurar mi codigo.
+- chat: https://claude.ai/share/4b1af723-0b94-4d5e-855c-eebd2d761bf5
 
 ## Ejercicio 10
 - Implementación íntegramente propia, sin fuentes externas.
