@@ -31,5 +31,6 @@ ejercicio y la memoización, y me ayudara a depurar mi codigo.
 - chat: https://claude.ai/share/4b1af723-0b94-4d5e-855c-eebd2d761bf5
 
 ## Ejercicio 10
-- Implementación íntegramente propia, sin fuentes externas.
+- La implementacion fue basada en el ejemplo de caballo_opt que hicimos en clase ademas de ayudarme con claude para que me explique el ejercicio y el como poder implementar ciertas funciones y depurar mi codigo.
+- chat: https://claude.ai/share/8f5b3d2c-7e20-4a1c-9f19-42be027771b4
 

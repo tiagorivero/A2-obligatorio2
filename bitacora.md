@@ -179,3 +179,27 @@ hacer 3 for anidados con delete, solo libere mete y likes que no dependian de es
 
 (agrege la separacion por horas aprox en cada dia, porque lo habia tomado como una entrada por 
 dia trabajado, no por hora trabajada)
+
+### Cuarta Hora (ejercicio 10)
+- Lei la letra del ejercicio 10.
+- Le pedi a claude que me lo explicara y que me diera ideas de como abarcarlo, para lo que me dijo que pensara que tipo de problema es, como representar la solucion parcial ,que podas existen, y si hay restricciones.
+- Al leer la letra me di cuenta que esta pedia hallar la de menor resultado, si empatan la de menor primer sumando sino el segundo y asi con los siguientes, viendo el teorico esto corresponde a la mejor solucion osea un ejercicio de optimizacion, por lo que utilice como base la implementacion de caballo_opt que habiamos hecho en clase.
+- Respondiendo a las preguntas que me hizo claude y viendo el problema puedo enteder que para la solucion parcial voy a tener que almacenar en un array el digito que le corresponde a cada letra (26 letras), ademas los digitos ya utilizados (10 numeros) y tambien un contador que cuente la cantidad de letras asignadas, ademas deberia podar si estoy asignando un digito ya usado, o si inicia con el 0, y verificar restricciones como que letras distintas son distintos digitos y le letras repetidas son digitos repetidos.
+- Luego de esto al ya entender el criterio que tenia que seguir, adapte los codigos mas basicos a estos, como esSolucion que devuelve true cuando asigne todas las letras, puedoAplicarMovimiento verifica si el digito fue utilizado, aplicarMovimiento que le asigna ese digito a esa letra y marca el digito como usado, deshacerMovimiento que seria lo contrario desmarcar el digito y a la letra asignarle el -1.
+
+## 2026-11-26 — Tiago Rivero
+
+### Primer Hora (En la mañana)
+- Depure con claude estas primeras versiones de los codigos y tubo ciertos errores, como que todos los letrasValores 
+estaban asignados en 0 y deberia para cada acertijo reiniciarlos, por lo que recorri en main y asigne -1, y marco 
+todos los digitos como false, ademas en esSolucion no verificaba si la suma era correcta.
+- Para verificar la suma debia usar la cantidad de palabras que defino en el main, para recorrerlas letra por letra y 
+usar letrasValores para hallar su valor y ponerlo en la suma, sumar todo y verificar que sea igual con el valor de la 
+ultima palabra. Para pasar la letra a indice tenia que usar los valores ASCI que me marean pero recicle lo que hice en 
+el ejercicio 2 que restaba -'a' a la letra pero ahora con mayusculas.
+- Commiteo lo que hice esta mañana y lo que habia quedado sin commitear del 23/11.
+
+(luego de commitear el ejercicio 9 el 23/11, quise adelantar un poco del ejercicio 10 donde pense el ejercicio y hice 
+unos codigos basicos, como estaba a medias y estaba con otros obligatorios y defensas se me olvido commitearlo. Lo 
+commiteo ahora 26/11 a las 12:30 junto con lo de esta mañana, para que en el historial quede separado lo que trabaje 
+en el ejercicio 10 el 23/11 a la noche, hoy a la mañana y lo que voy a hacer esta tarde.)
