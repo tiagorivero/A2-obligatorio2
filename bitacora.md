@@ -1,13 +1,6 @@
 # Bitácora — Obligatorio 2
 
-**Integrantes:** Nombre Apellido (Nº estudiante), Nombre Apellido (Nº estudiante)
-
-> **Instrucciones** (borrar esta sección antes de entregar): agregar una entrada por
-> cada día trabajado, indicando la fecha y quién trabajó (un integrante o "En conjunto").
-> Registrar el proceso real: ideas exploradas, decisiones y su justificación, partes de
-> implementaciones, bugs encontrados y cómo se corrigieron, resultados de pruebas y dudas
-> abiertas. Si se usó IA ese día, indicar herramienta, consulta y qué se hizo con la
-> respuesta. Una bitácora escrita íntegramente el día de la entrega implica pérdida de puntos.
+**Integrantes:** Tiago Rivero 336462
 
 ## 2026-11-03 — Tiago Rivero
 
@@ -294,3 +287,8 @@ mejor y podo.
 - Despues de agregar esto volvi a depurar con claude el codigo el cual por fin ya estaba correcto, 
 ya solo me quedaba correr las pruebas comfirmar que todo este bien y listo.
 - Commiteo el ejercicio 10
+
+- Ya lo ultimo que me queda es prolijar la prueba, como cambiar el max de la mochila del 8 que fue 
+tomado el ejercio hecho en clase por el max que hice a mano en el 9, comente arriba de cada 
+ejercicio la autoria de los codigos, elimine los ejecutables y tests,salidas,pruebas,run_tests.sh.
+- Por estos arreglos va a salir en los metadatos que los archivos fueron modificados pero se puede corroborar en los commit que son solamente para prolijar la entrega.

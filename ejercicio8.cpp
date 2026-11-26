@@ -1,9 +1,14 @@
+// la mochila fue tomada de la clase del 13/11, yo adapte el codigo al ejercicio ademas de recibir ayuda de claude para las explicaciones y depuraciones
 #include <cassert>
 #include <string>
 #include <iostream>
 #include <limits>
 
 using namespace std;
+
+int maximo(int a, int b){
+    return (a > b) ? a : b;
+}
 
 //Codigo tomado de la clase del 13/11
 int mochila(int n, int cap, int* pesos, int* satisfacciones, int* categorias, int* limCategoria) {
@@ -40,7 +45,7 @@ int mochila(int n, int cap, int* pesos, int* satisfacciones, int* categorias, in
                                 tab[obj][cap_i][L0_i][L1_i][L2_i][L3_i] = tab[obj - 1][cap_i][L0_i][L1_i][L2_i][L3_i];
                             else{
                                 limitesDisponibles[categoria_obj]--;
-                                tab[obj][cap_i][L0_i][L1_i][L2_i][L3_i] = max(tab[obj - 1][cap_i][L0_i][L1_i][L2_i][L3_i], satisfaccion_obj + tab[obj - 1][cap_i - peso_obj][limitesDisponibles[0]][limitesDisponibles[1]][limitesDisponibles[2]][limitesDisponibles[3]]);
+                                tab[obj][cap_i][L0_i][L1_i][L2_i][L3_i] = maximo(tab[obj - 1][cap_i][L0_i][L1_i][L2_i][L3_i], satisfaccion_obj + tab[obj - 1][cap_i - peso_obj][limitesDisponibles[0]][limitesDisponibles[1]][limitesDisponibles[2]][limitesDisponibles[3]]);
                             }
                         }
                     }

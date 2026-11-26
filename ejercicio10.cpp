@@ -1,3 +1,4 @@
+// Tome como base la implementacion de caballo_opt, luego me ayude con claude para que me diera ideas en la implementacion de ciertas funciones que luego yo pase a codigo y luego me ayudo a depurar.
 #include <cassert>
 #include <string>
 #include <iostream>
@@ -126,6 +127,7 @@ bool puedoPodar() {
     return acarreo != 0;
 }
 
+// template tomado del teorico de la clase
 void criptoaritmetica_opt(int i) {
     if(!puedoPodar()) {
         if (esSolucion(i)) {
