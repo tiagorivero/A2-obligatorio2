@@ -46,5 +46,17 @@ solo puede atajar.
 una sola vez en O(1), quedando O(K^2) de tiempo, y el memo ocupa O(K^2) de espacio.
 
 ## Ejercicio 10
-- Sin restricciones de órdenes. / Justificación: ...
-
+- La letra no pone restricciones de órdenes, pero pide backtracking y que si hay podas posibles se 
+realicen. Uso el template de optimización de clase basado en caballo_opt, donde el estado es la 
+letra i que estoy asignando y los movimientos son los 10 digitos, solo puedo aplicar uno si no está 
+usado y si no pone un 0 en la inicial de una palabra de más de una letra. Las letras las asigno por 
+columnas de derecha a izquierda, asi puedo verificar la suma columna por columna lo antes posible.
+- Uso poda por factibilidad, que si una columna ya tiene todas sus letras asignadas y la cifra no 
+coincide con la suma más el acarreo corto. Y otra por optimalidad, que si ya tengo una solucion 
+armo el resultado como si las letras que faltan valieran lo minimo posible (0, o 1 si son inicial), 
+y si aun asi es mayor que el mejor corto, porque por esa rama no puede salir nada mejor. Uso > y 
+no >= porque si empata todavia puede ganar en el desempate por los sumandos.
+- Como hay como mucho 10 letras distintas, en el peor caso son O(10!) asignaciones por acertijo, y 
+en cada nodo puedoPodar recorre las columnas y las palabras, aunque con las podas se recorre mucho 
+menos. En espacio uso arreglos de tamaño fijo y la recursión tiene como mucho 10 de profundidad, 
+quedando O(1). Los valores son long long porque un número de 10 cifras no entra en un int.

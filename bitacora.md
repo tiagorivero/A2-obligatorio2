@@ -203,3 +203,94 @@ el ejercicio 2 que restaba -'a' a la letra pero ahora con mayusculas.
 unos codigos basicos, como estaba a medias y estaba con otros obligatorios y defensas se me olvido commitearlo. Lo 
 commiteo ahora 26/11 a las 12:30 junto con lo de esta mañana, para que en el historial quede separado lo que trabaje 
 en el ejercicio 10 el 23/11 a la noche, hoy a la mañana y lo que voy a hacer esta tarde.)
+
+### Segunda Hora (En la tarde)
+- Otro error que me marco claude al depurar fue que en puedoAplicarMovimiento me falto verificar si 
+la palabra de 2 o mas letras empezaba con 0, por lo que deberia saber que letras son iniciales de 
+una palabra cuando leeo el acertijo, lo que hice fue hacer un array de bool que almacena si la 
+letra es la inicial de la palabra, para luego en puedoAplicarMovimiento verificar si es inicial y 
+no permitirlo.
+- Al depurar tambien le pedi a claude que me diera idea para los que me parecieron más complejos 
+como con clonarSolucion, donde lo que hago crear un array mejores de tamaño K que por letra es como 
+maximo 5 más 1 por el resultado y ahi guardo el valor de cada palabra para imprimirlo al final.
+- Luego para esMejorSolucion la letra dice quedarse con el de menor resultado, y si empatan a de 
+menor primer sumando, segundo, y asi, lo que hice fue primero calculo el valor del resultado de 
+esta solucion y lo comparo con la ultima que esta guardada en mejores al clonar, primero si son 
+distintas me quedo con la más chica, y sino itero comparando sumando por sumando hasta encontrar en 
+el que difieran y quedarme con el más chico.
+- Para puedoPoder claude me dio ideas para solucionarlo, para lo que menciono que si todas las 
+letras de las ultimas k columnas ya tienen valor podria llegar verificar la suma sin esperar al 
+resto, esta idea me parecio correcta y le pedi que me explicara más esta idea para yo poder pasarla 
+a codigo. Claude me explico que la idea es recorrer columna por columna y si falta asignar alguna 
+letra paro de revisar y no podo, si estan todas y no coincide la suma podo, y si estan todas y la 
+cifra coincide calculo el acarreo y paso a la siguiente columna.
+- Lo que hice fue recorrer columna por columna usando cantidadColumnas que asigno en el main como 
+la palabra mas larga, al inicio arrastro el acarreo de la columna anterior igualandolo a suma, 
+luego recorro por palabra tomando solo las letras hasta esa columna restando el indice de la 
+columna y con esas letras calculo la suma y si falta asignar alguna letra no podo, luego el 
+resultado como es un unico digito hallo ese y si no esta asignado no podo.
+
+### Tercera Hora
+- Para la verificacion del final me mareaba un poco con como verificar si el resultado coincidia 
+con la suma, por lo que hice algunos ejemplos en papel sumando las letras y entendi que el digito 
+final era igual al modulo de la suma entre 10 y el acarreo es la divison de la suma entre 10.
+- Por lo que en el codigo lo que hice fue verificar esto mismo y si es distinto la suma da mal y 
+puedo podar y sino guardo el acarreo y verifico al final si el acarreo es 0 o sino podo.
+- Para el propio codigo de backtracking voy a usar el template de la clase para los ejercicios de 
+optimizacion, tomando como estado que se pasa en la recursion la letra i que estoy asignando y 
+tomando como que cada moviemiento candidato es cada digito de los 10 posibles. En este punto no me 
+quedo claro si para las letras deberia recorrer desde la a hasta la z o ir recorriendo por palabra 
+por lo que me dijo que podia de las ideas que menciono me quede con la más eficiente que era 
+recorrer la columna 0 de todas las palabras y asi agregando cada letra que aparece en un arreglo de 
+bool. Le pedi que me la expandiera para luego aplicarla en el main, por ahora solo tomo que hay un 
+array ordenado con las letras que luego hare en el main, tiene tamaño 10 por solo haber 10 digitos 
+distintos.
+
+### Cuarta Hora
+- Luego segui con el main que me habia quedado a medias, tuve que agregar varias cosas que me 
+quedaron de funciones del backtracking anteriores como calculo de la cantidadColumnas y 
+letrasOrdenadas.
+- En el main ya recorria la cantidad T de acertijos y para cada uno tomo la cantidad K de sumandos 
+y las guardo en palabras, luego ya reiniciaba el acertijo, y luego agrego el calculo de la 
+cantidadColumnas donde recorro todas las palabras y me quedo con la de mayor largo, ademas en esta 
+misma recorrida si la palabra tiene mas de 2 digitos marco a la letra en la pos 0 como una letra 
+inicial.
+- Luego tenia que ordenar las letras para usar en la recursion y segui la idea que me habia dicho 
+claude, uso un array de booleanos, recorro la cantidad de columna, para cada una recorro las 
+palabras y tambien el resultado y si la letra no esta agregada en la lista la marco y la agrego en 
+letrasOrdenadas y ademas la sumo como letra distinta asignada para que ya al final me quede para 
+poder verificar en esSolucion.
+- Y por ultimo en el main me faltaba devolver 'imposible' si no encuentra solucion para cual 
+simplemente hice una variable booleana de si existeSolucion que marco al encontrar una y clonarla, 
+y si existe imprimo en el formato de la letra como una suma, recorriendo la cantidad de la palabras 
+y mostrando las mejores.
+
+### Quinta Hora
+- Luego depure todo el codigo y tenia varios problemas como no haber llamadado al bt, como que 
+armaba mal el valor de una palabra ya que sumaba los digitos en vez de volver a cada indice una 
+decena/centena/etc, por lo cual cuando asigno el valor tenia que ir multiplicando por 10 para 
+separar las cifras, ademas tuve que cambiar varios int por long long ya que por letra un número 
+puede superar el rango de un entero de 32 bits, ademas no inicialice agregadas todas en false, y no 
+tomaba bien la letra dentro de la columna ni verifica si las palabras son mas cortas que la columna.
+- Arregle todo eso,volvi a depurar y seguia con varios errores como que estaba haciendo la suma en 
+esSolucion inecesarriamente ya que ya la hacia en el puedoPodar por lo que tuve que eliminar esa 
+parte y simplemente comparar si la cantidad asignada era igual a i como en un inicio, y otros mas 
+simples como falta inicializar variables o cortar si ya no hay solucion mejor o si la palabra es 
+mas corta que la columna.
+- Despues de todos estos cambios volvi a depurar y claude me dijo que el codigo estaba bien pero 
+que solo podaba por factibilidad y que la letra pedia que si hay podas posibles hay que 
+realizarlas, por lo que le pedi que me diera ideas de como implementarla en mi codigo. La idea es 
+que si, por más que complete lo que falta de la mejor forma posible, el resultado no puede ser 
+menor que el mejor que tengo, corto.
+- Lo que hice fue que si ya existe una solucion, agarro la palabra del resultado actual, recorro 
+esa palabra guardo el valor que tiene, si alguna letra no fue asignada marco el resultado como 
+incompleto, y al final si ya estan todas las letras definidas y este resultado es mas grande que el 
+de la solucion que ya tenia entonces puedo podar.
+- Volvi a depurar y claude me seguia diciendo que la poda estaba mal, ya que al exigir que este 
+completo tenia que esperar casi hasta al final y la poda era inutil, por lo que tuve que hacer es 
+que si ya tengo una solución, armo el resultado optimista como si las letras que faltan valieran lo 
+mínimo posible. Si aun así queda más grande que el mejor, por esa rama no voy a encontrar nada 
+mejor y podo.
+- Despues de agregar esto volvi a depurar con claude el codigo el cual por fin ya estaba correcto, 
+ya solo me quedaba correr las pruebas comfirmar que todo este bien y listo.
+- Commiteo el ejercicio 10
